@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Poppins:wght@300&family=Work+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+:root{
+    --main-color: rgb(255, 225, 0);
+}
+body{
+    /* overflow: hidden; */
+}
+nav{
+    background-color: var(--main-color);
+    display: flex;
+    padding:  1rem 0.5rem;
+    width: 100vw;
+}
+nav .noteicon{
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+nav .text{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    position: absolute;
+    
+    /* background-color: blue; */
+    /* border: 1px solid black; */
+}
+
+.notebox{
+    height: 13rem;
+    width: 20rem;
+    overflow-y: scroll;
+    margin: 2rem;
+    /* margin-left: 0; */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: white;
+    z-index: 10;
+    display: inline-block;
+}
+.note{
+    height: 2rem;
+    /* border: 1px solid black; */
+    width: 70%;
+    margin: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 700;
+    overflow-y: scroll;
+    overflow: hidden;
+    padding: 0 5px;
+    position: relative;
+}
+textarea{
+    resize: none;
+    outline: none;
+    border:none;
+    padding: 10px 5px;
+}
+
+.notebox .edit, .delete{
+    float: right;
+    margin:0.4rem;
+    color: white;
+    background-color: rgb(54, 232, 48);
+    border: none;
+    padding: 5px 8px;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease-in;
+    
+    position: sticky;
+    top :0;
+}
+.edit:hover,.delete:hover{
+    transform: scale(1.2);
+    background-color: rgb(11, 248, 11);
+}
+.delete{
+    background-color: red;
+}
+.delete:hover{
+    background-color: rgb(243, 63, 57);
+}
+.iconbtn{
+    position: sticky;
+    top:0;
+}
+.hidden{
+    display: none;
+}
+
+
+
+/* buttonCss */
+.container1{
+    
+    margin: 10px;
+    float: right;
+}
+
+.text1{
+    position: absolute;
+    left: 35%;
+    font-weight: 700;
+}
+.circle1{
+    
+    background-color: var(--main-color);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 25px;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    /* border:1px solid rgb(129, 36, 2); */
+}
+.icon1{
+    float:left;
+    padding-left: 13px;
+}
+
+.btn1:hover .circle1{
+    width: 12rem;
+}
+
+.hla1{
+    color: white;
+    font-size: 16px;
+}
+.nhla1{
+    display:none;
+    font-size: 16px;
+}
+.btn1{
+    display: flex;
+    align-items: center;
+    width: 9rem;
+    height: auto;
+    padding-left: 0.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position:relative;
+    border-radius: 25px;
+}
+.btn1:hover .nhla1{
+    display: inline-block;
+    color:white;
+}
+.btn1:hover .hla1{
+    display: none;
+}
+.btn1:hover .text1{
+    color: white;
+}
+
+
+@media (max-width: 62em) {
+    .notebox{
+        margin-left:5px;
+    }
+}
+@media (max-width: 29rem) {
+    .notebox{
+        height: 13rem;
+        width: 15rem;
+    }
+    .container1{
+        margin: 15px 0;
+        float: left;
+    }
+}
